@@ -1,11 +1,14 @@
+# 1. Atur file utama web agar membuka dashboard.php
+DirectoryIndex dashboard.php index.php index.html
+
 RewriteEngine On
 
-# 1. Pastikan folder atau file asli tetap bisa diakses normal
+# 2. Pastikan folder atau file asli tetap bisa diakses normal
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
-# 2. Ubah localhost/linktree/username menjadi localhost/linktree/u.php?user=username
+# 3. Ubah domain.com/username menjadi domain.com/u.php?user=username
 RewriteRule ^([^/]+)$ u.php?user=$1 [L,QSA]
 
-RewriteEngine On
+# 4. Fitur Short Link: domain.com/s/kode menjadi domain.com/short.php?code=kode
 RewriteRule ^s/([a-zA-Z0-9_-]+)$ short.php?code=$1 [L]
