@@ -1,0 +1,348 @@
+/* ==========================================================================
+   GAYA NEO-BRUTALISME & PASTEL POP (FUN, MODERN, ARTISTIK)
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Space Grotesk', -apple-system, sans-serif;
+    background-color: #fefbeb; /* Kuning soft yang ceria */
+    color: #1a1a1a;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #1a1a1a;
+}
+
+/* ==========================================================================
+   HALAMAN AUTH & FORM (Login, Register, Tambah/Edit)
+   ========================================================================== */
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffde4d; /* Kuning pop cerah */
+    padding: 24px;
+}
+
+.auth-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 460px;
+    /* Efek Bayangan Tegas Khas Pop Art */
+    border: 3px solid #1a1a1a;
+    box-shadow: 8px 8px 0px #1a1a1a;
+}
+
+.auth-card h2 {
+    font-size: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+/* Kustomisasi Input Form */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.form-group input[type="text"],
+.form-group input[type="url"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 14px 16px;
+    border: 3px solid #1a1a1a;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #fff;
+    transition: all 0.15s ease;
+}
+
+/* Efek geser kotak pas input diklik */
+.form-group input:focus {
+    outline: none;
+    background-color: #f0fdf4;
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0px #1a1a1a;
+}
+
+/* ==========================================================================
+   TOMBOL-TOMBOL NYENTRIK
+   ========================================================================== */
+button[type="submit"], .btn {
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 3px solid #1a1a1a;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    background: #6366f1; /* Indigo default */
+    color: white;
+    box-shadow: 4px 4px 0px #1a1a1a;
+}
+
+button[type="submit"]:hover, .btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #1a1a1a;
+}
+
+button[type="submit"]:active, .btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px #1a1a1a;
+}
+
+.btn-primary {
+    background-color: #ff76ce; /* Pink Pop */
+    color: #1a1a1a;
+}
+
+.btn-outline {
+    background-color: #94ffd8; /* Hijau Mint Minty */
+    color: #1a1a1a;
+}
+
+.btn-danger {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+.btn-block {
+    display: flex;
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+/* Notifikasi / Alert */
+.alert {
+    padding: 14px;
+    border: 3px solid #1a1a1a;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    box-shadow: 4px 4px 0px #1a1a1a;
+}
+.alert-error { background: #ff8e8e; color: #1a1a1a; }
+.alert-success { background: #94ffd8; color: #1a1a1a; }
+
+/* ==========================================================================
+   HALAMAN DASHBOARD ADMIN
+   ========================================================================== */
+.dashboard-page {
+    background-color: #fbf3e4;
+    min-height: 100vh;
+    padding: 50px 20px;
+}
+
+.dashboard-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.dashboard-header {
+    background: #b460f3; /* Ungu artistik */
+    padding: 24px;
+    border-radius: 20px;
+    border: 3px solid #1a1a1a;
+    box-shadow: 6px 6px 0px #1a1a1a;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+    color: white;
+}
+
+.dashboard-header h2 {
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.dashboard-header .muted {
+    color: #fefbeb;
+    font-weight: 500;
+}
+
+.header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+/* Kartu Link di Dashboard */
+.links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.link-card {
+    background: #ffffff;
+    border: 3px solid #1a1a1a;
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 4px 4px 0px #1a1a1a;
+    transition: all 0.15s ease;
+}
+
+.link-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 8px 8px 0px #1a1a1a;
+}
+
+.link-card.nonaktif {
+    background: #e2e8f0;
+    opacity: 0.6;
+    border-style: dashed;
+}
+
+.link-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.link-judul {
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.link-url {
+    font-size: 13px;
+    color: #4a4a4a;
+    font-weight: 500;
+}
+
+.klik-badge {
+    font-size: 13px;
+    background: #ffde4d;
+    color: #1a1a1a;
+    padding: 6px 14px;
+    border: 2px solid #1a1a1a;
+    border-radius: 30px;
+    font-weight: 700;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 50px;
+    background: white;
+    border: 3px dashed #1a1a1a;
+    border-radius: 20px;
+}
+
+/* ==========================================================================
+   EFEK MAHAL: ANIMASI GLOBAL & INTERAKTIF
+   ========================================================================== */
+
+/* Animasi kartu muncul satu per satu saat halaman dibuka */
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.link-card, .auth-card, .profile-section {
+    animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+/* Mengatur delay kemunculan tiap kartu agar estetik */
+.links-list .link-card:nth-child(1) { animation-delay: 0.1s; }
+.links-list .link-card:nth-child(2) { animation-delay: 0.2s; }
+.links-list .link-card:nth-child(3) { animation-delay: 0.3s; }
+
+/* Efek Teks Berjalan (Marquee) untuk Header Dashboard */
+.marquee-container {
+    background: #ffde4d;
+    border-top: 3px solid #1a1a1a;
+    border-bottom: 3px solid #1a1a1a;
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+    z-index: 100;
+}
+
+.marquee-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-100%, 0); }
+}
+
+/* TOMBOL URUTAN ARCADE */
+.btn-urutan {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    font-size: 11px;
+    background: #ffffff;
+    border: 2px solid #1a1a1a;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px #1a1a1a;
+    transition: all 0.1s ease;
+}
+
+.btn-urutan:hover {
+    background: #ffde4d; /* Kuning pop saat di-hover */
+    transform: translate(-1px, -1px);
+    box-shadow: 3px 3px 0px #1a1a1a;
+}
+
+.btn-urutan:active {
+    transform: translate(1px, 1px);
+    box-shadow: 0px 0px 0px #1a1a1a;
+}
+.link-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Memberi jarak antar tombol yang konsisten */
+    flex-shrink: 0;
+}

@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# 1. Pastikan folder atau file asli tetap bisa diakses normal
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# 2. Ubah localhost/linktree/username menjadi localhost/linktree/u.php?user=username
+RewriteRule ^([^/]+)$ u.php?user=$1 [L,QSA]
