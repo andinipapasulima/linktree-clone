@@ -346,3 +346,204 @@ button[type="submit"]:active, .btn:active {
     gap: 12px; /* Memberi jarak antar tombol yang konsisten */
     flex-shrink: 0;
 }
+
+/* ==========================================================================
+   GAYA NEO-BRUTALISME & PASTEL POP (FUN, MODERN, ARTISTIK)
+   ========================================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Space Grotesk', -apple-system, sans-serif;
+    background-color: #fefbeb;
+    color: #1a1a1a;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #1a1a1a;
+}
+
+/* ==========================================================================
+   HALAMAN AUTH & FORM (Login, Register, Tambah/Edit)
+   ========================================================================== */
+.auth-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffde4d;
+    padding: 24px;
+}
+
+.auth-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 460px;
+    border: 3px solid #1a1a1a;
+    box-shadow: 8px 8px 0px #1a1a1a;
+}
+
+.auth-card h2 {
+    font-size: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+/* Kustomisasi Input Form */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.form-group input[type="text"],
+.form-group input[type="url"],
+.form-group input[type="password"],
+.form-group input[type="email"] {
+    width: 100%;
+    padding: 14px 16px;
+    border: 3px solid #1a1a1a;
+    border-radius: 12px;
+    font-size: 16px; /* Lebih besar untuk mobile */
+    font-weight: 600;
+    background-color: #fff;
+    transition: all 0.15s ease;
+}
+
+/* Efek geser kotak pas input diklik */
+.form-group input:focus {
+    outline: none;
+    background-color: #f0fdf4;
+    transform: translate(-2px, -2px);
+    box-shadow: 4px 4px 0px #1a1a1a;
+}
+
+/* ==========================================================================
+   TOMBOL-TOMBOL NYENTRIK
+   ========================================================================== */
+button[type="submit"], .btn {
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 24px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 3px solid #1a1a1a;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    background: #6366f1;
+    color: white;
+    box-shadow: 4px 4px 0px #1a1a1a;
+    width: 100%;
+}
+
+button[type="submit"]:hover, .btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #1a1a1a;
+}
+
+button[type="submit"]:active, .btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: 0px 0px 0px #1a1a1a;
+}
+
+/* Notifikasi / Alert */
+.alert {
+    padding: 14px;
+    border: 3px solid #1a1a1a;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    box-shadow: 4px 4px 0px #1a1a1a;
+}
+.alert-error { background: #ff8e8e; color: #1a1a1a; }
+.alert-success { background: #94ffd8; color: #1a1a1a; }
+
+/* ==========================================================================
+   RESPONSIVE UNTUK MOBILE
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+    
+    .auth-card {
+        padding: 24px;
+    }
+    
+    .auth-card h2 {
+        font-size: 22px;
+    }
+    
+    .form-group input[type="text"],
+    .form-group input[type="url"],
+    .form-group input[type="password"],
+    .form-group input[type="email"] {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+    
+    button[type="submit"], .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+    
+    .alert {
+        padding: 10px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .auth-card {
+        padding: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group label {
+        font-size: 12px;
+    }
+}
+
+/* Mencegah auto-zoom pada input di mobile */
+input[type="text"],
+input[type="url"],
+input[type="password"],
+input[type="email"],
+input[type="number"],
+input[type="tel"],
+input[type="color"],
+textarea,
+select {
+    font-size: 16px !important;
+}
+
+/* Untuk HP */
+@media (max-width: 768px) {
+    input, textarea, select {
+        font-size: 16px !important;
+    }
+}

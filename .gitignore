@@ -1,0 +1,38 @@
+# Database configuration
+koneksi.php
+
+# Upload folders
+uploads/
+uploads/backgrounds/
+
+# XAMPP specific
+*.exe
+*.dll
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+
+# Log files
+*.log
+error_log
+
+# Backup files
+*.bak
+*.sql
+*.sql.zip
+
+# Temp files
+tmp/
+temp/
+*.tmp
+
+# Hidden files
+.*.swp
+.*.swo

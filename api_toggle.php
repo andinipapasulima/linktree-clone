@@ -10,6 +10,7 @@ if (!isset($_SESSION['login'])) {
 }
 
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+$status = isset($_GET['status']) ? intval($_GET['status']) : 0;
 $user_id = $_SESSION['id_user'] ?? 0;
 
 if ($id === 0) {
@@ -17,16 +18,13 @@ if ($id === 0) {
     exit;
 }
 
-// Gunakan prepared statement untuk keamanan
-$stmt = mysqli_prepare($conn, "DELETE FROM links WHERE id = ? AND user_id = ?");
-mysqli_stmt_bind_param($stmt, "ii", $id, $user_id);
-$delete = mysqli_stmt_execute($stmt);
+$stmt = mysqli_prepare($conn, "UPDATE links SET aktif = ? WHERE id = ? AND user_id = ?");
+mysqli_stmt_bind_param($stmt, "iii", $status, $id, $user_id);
+$update = mysqli_stmt_execute($stmt);
 
-if ($delete && mysqli_stmt_affected_rows($stmt) > 0) {
+if ($update) {
     echo json_encode(['status' => 'success']);
 } else {
-    echo json_encode(['status' => 'error', 'message' => 'Gagal menghapus atau link tidak ditemukan']);
+    echo json_encode(['status' => 'error', 'message' => 'Gagal mengupdate status']);
 }
-
-mysqli_stmt_close($stmt);
 ?>
